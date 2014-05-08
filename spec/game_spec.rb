@@ -1,8 +1,8 @@
-require 'spec_helper'
-describe "a sample game" do
-	let(:computer) { Computer.new } 
-		it "should generate a random guess" do
-			computer.guess.should have(4).items
-		end
-end
+require "spec_helper"
 
+describe "Start the game" do
+	it "should start the game" do
+		game = Game.new
+		game.should respond_to(:start)
+	end
+end
