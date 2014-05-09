@@ -3,8 +3,13 @@ class Computer
 	# def guess
 	# 	COLORS.shuffle.take(4)
 	# end
-	def current_guess previous_guess = nil
-		["R","R","G","G"]
+	def current_guess s
+		some = s.length
+		if s.length == 1296
+			["R","R","G","G"]
+		else
+			s.first
+		end
 	end
 
 	def eliminate_codes seed, current_guess, feedback
@@ -26,10 +31,12 @@ class Computer
 	def guess codemaker, codebreaker
 		correct = []
 		close = []
+		control = Array.new(4)
 		codemaker.each_index do |e| 
 			if codemaker[e] == codebreaker[e]
 				correct << codemaker[e]
 			elsif codemaker[e] != codebreaker[e] && codebreaker.include?(codemaker[e])
+
 				close << codebreaker[e]
 			end
 		end
