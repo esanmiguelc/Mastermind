@@ -327,10 +327,11 @@ describe "computer tasks" do
 			computer.guess(["B","Y","P","O"], ["R", "R", "G", "G"]).should eql([0,0])
 			computer.guess(["R","R","G","G"], ["R","B","B","Y"]).should eql([1,0])
 			computer.guess(["R","R","G","Y"], ["R","B","B","Y"]).should eql([2,0])
-			computer.guess(["R", "R", "G", "B"],["R", "R", "G", "G"]).should eql([3,0])
+			computer.guess(["R", "R", "G", "G"],["R", "R", "G", "B"]).should eql([3,0])
 			computer.guess(["R", "R", "G", "G"],["R", "R", "G", "G"]).should eql([4,0])
-			computer.guess(["R","G","B","Y"], ["R", "R", "G", "G"]).should eql([1,1])
+			computer.guess(["R", "R", "G", "G"],["R","G","B","Y"]).should eql([1,1])
 			computer.guess(["O","B","B","Y"], ["B", "B", "B", "Y"]).should eql([3,0])
+			computer.guess(["B", "R", "G", "O"], ["R","B","Y","G"]).should eql([0,3])
 
 			
 		end
@@ -341,10 +342,13 @@ describe "computer tasks" do
 			computer.eliminate_codes(s,code,feedback).should eql([["B", "B", "B", "Y"], ["G", "B", "B", "Y"], 
 																														["O", "B", "B", "B"], ["O", "B", "B", "G"], 
 																														["O", "B", "B", "O"], ["O", "B", "B", "P"], 
-																														["O", "B", "B", "R"], ["P", "B", "B", "Y"], 
+																														["O", "B", "B", "R"], ["O", "B", "G", "Y"], 
+																														["O", "B", "O", "Y"], ["O", "B", "P", "Y"], 
+																														["O", "B", "R", "Y"], ["O", "B", "Y", "Y"], 
+																														["O", "G", "B", "Y"], ["O", "O", "B", "Y"], 
+																														["O", "P", "B", "Y"], ["O", "R", "B", "Y"], 
+																														["O", "Y", "B", "Y"], ["P", "B", "B", "Y"], 
 																														["R", "B", "B", "Y"], ["Y", "B", "B", "Y"]])
-			computer.eliminate_codes(s,["R","R","G","G"],[1,0]).should eql(["R","B","B","Y"])
-			computer.eliminate_codes(s,["R","R","G","G"],[2,0]).should eql(["R","B","B","Y"])
 		end
 
 		# it "computer should generate a random guess" do

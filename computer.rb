@@ -28,18 +28,51 @@ class Computer
 		COLORS.repeated_permutation(4).to_a.sort!
 	end
 
-	def guess codemaker, codebreaker
-		correct = []
-		close = []
-		control = Array.new(4)
-		codemaker.each_index do |e| 
-			if codemaker[e] == codebreaker[e]
-				correct << codemaker[e]
-			elsif codemaker[e] != codebreaker[e] && codebreaker.include?(codemaker[e])
-
-				close << codebreaker[e]
+	def guess code, guess
+		control = Array.new(4) { |x| x = 0 }
+		# code.each_index do |e| 
+		# 	if code[e] == guess[e]
+		# 		control[e] = 1
+		# 		next
+		# 	end
+		# 	4.times do |j|   
+		# 		if control[e] != 0 
+		# 			next
+		# 		elsif code[j] == guess[i]
+		# 			control[e] = 2
+		# 		end
+		# 	end
+		# end
+		
+		# guess.each_index do |i|
+		# 	if guess[i] == code[i]
+		# 		control[i] = 1
+		# 		next
+		# 	end
+		# 	code.each_index do |j|
+		# 		if control[i] == 0 && guess[i] == code[j]
+		# 			control[i] = 2
+		# 			next
+		# 		end
+		# 	end
+		# end
+		control_guess = code.dup
+		guess.each_index do |i|
+			if guess[i] == code[i]
+				control[i] = 1
+				control_guess[i] = nil
+				next
 			end
 		end
-		[correct.length, close.length]
+
+		code.each_index do |i|
+			if control_guess.include?(guess[i]) && control[i] == 0
+				control[i] = 2 
+				control_guess[i] = nil
+				next
+			end
+		end
+
+		[control.count(1), control.count(2)]
 	end
 end
