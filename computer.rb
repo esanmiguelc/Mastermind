@@ -30,33 +30,8 @@ class Computer
 
 	def guess code, guess
 		control = Array.new(4) { |x| x = 0 }
-		# code.each_index do |e| 
-		# 	if code[e] == guess[e]
-		# 		control[e] = 1
-		# 		next
-		# 	end
-		# 	4.times do |j|   
-		# 		if control[e] != 0 
-		# 			next
-		# 		elsif code[j] == guess[i]
-		# 			control[e] = 2
-		# 		end
-		# 	end
-		# end
-		
-		# guess.each_index do |i|
-		# 	if guess[i] == code[i]
-		# 		control[i] = 1
-		# 		next
-		# 	end
-		# 	code.each_index do |j|
-		# 		if control[i] == 0 && guess[i] == code[j]
-		# 			control[i] = 2
-		# 			next
-		# 		end
-		# 	end
-		# end
 		control_guess = code.dup
+
 		guess.each_index do |i|
 			if guess[i] == code[i]
 				control[i] = 1
@@ -68,11 +43,10 @@ class Computer
 		code.each_index do |i|
 			if control_guess.include?(guess[i]) && control[i] == 0
 				control[i] = 2 
-				control_guess[i] = nil
+				# control_guess[i] = nil
 				next
 			end
 		end
-
 		[control.count(1), control.count(2)]
 	end
 end
