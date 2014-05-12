@@ -43,8 +43,7 @@ class Computer
 		code.each_index do |i|
 			if control_guess.include?(guess[i]) && control[i] == 0
 				control[i] = 2 
-				# control_guess[i] = nil
-				next
+				next	
 			end
 		end
 		[control.count(1), control.count(2)]

@@ -15,7 +15,6 @@ class Game
 			feedback = user.give_feedback
 			puts "feedback: #{feedback}"
 			s = computer.eliminate_codes(s, guess, feedback)
-			puts "#{s}"
 		end 
 		puts "#{guess}, Yay! Game over"
 	end
