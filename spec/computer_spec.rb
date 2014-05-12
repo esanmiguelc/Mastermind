@@ -41,9 +41,5 @@ describe "computer tasks" do
 																														["O", "Y", "B", "Y"], ["P", "B", "B", "Y"], 
 																														["R", "B", "B", "Y"], ["Y", "B", "B", "Y"]])
 		end
-
-		# it "computer should generate a random guess" do
-		# 	computer.guess.should have(4).items
-		# end
 end
 
