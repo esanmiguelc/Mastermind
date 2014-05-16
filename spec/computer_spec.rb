@@ -22,9 +22,7 @@ describe "computer tasks" do
 			computer.guess(["R", "R", "G", "G"],["R", "R", "G", "G"]).should eql([4,0])
 			computer.guess(["R", "R", "G", "G"],["R","G","B","Y"]).should eql([1,1])
 			computer.guess(["O","B","B","Y"], ["B", "B", "B", "Y"]).should eql([3,0])
-			computer.guess(["B", "R", "G", "O"], ["R","B","Y","G"]).should eql([0,3])
-
-			
+			computer.guess(["B", "R", "G", "O"], ["R","B","Y","G"]).should eql([0,3])			
 		end
 
 		it "should eliminate code that would not have given the same response" do

@@ -6,20 +6,18 @@ class Game
 	def start
 		computer = Computer.new
 		user = User.new
-		feedback = []
-		guess = []
+		guess_num = 1
 		s = computer.generate_patterns
-		while feedback[0] != 4
+		begin
 			guess = computer.current_guess(s)
 			puts "#{guess}"
 			feedback = user.give_feedback
-			puts "feedback: #{feedback}"
+			puts "feedback: #{feedback}, number of guesses: #{guess_num}"
 			s = computer.eliminate_codes(s, guess, feedback)
-		end 
+			guess_num += 1
+		end while feedback[0] != 4
 		puts "#{guess}, Yay! Game over"
 	end
 end
 
 puts "Please think of a pattern\nWhen ready type: Game.new.start"
-
-["R","B", "Y", "O"]
