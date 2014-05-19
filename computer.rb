@@ -1,8 +1,6 @@
 class Computer
 	COLORS = ["R","G","B","Y","P","O"]
-	# def guess
-	# 	COLORS.shuffle.take(4)
-	# end
+
 	def current_guess s
 		some = s.length
 		if s.length == 1296
