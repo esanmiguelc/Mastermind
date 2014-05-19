@@ -6,7 +6,7 @@ class Computer
 		if s.length == 1296
 			["R","R","G","G"]
 		elsif s.length == 0
-				raise "There seems to have been some inconsistencies with the guesses."
+			raise "There seems to have been some inconsistencies with the guesses."
 		else
 			s.first
 		end
