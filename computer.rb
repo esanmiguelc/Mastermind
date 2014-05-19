@@ -1,7 +1,7 @@
 class Computer
 	COLORS = ["R","G","B","Y","P","O"]
 
-	def current_guess s
+	def current_guess(s)
 		some = s.length
 		if s.length == 1296
 			["R","R","G","G"]
@@ -12,7 +12,7 @@ class Computer
 		end
 	end
 
-	def eliminate_codes seed, current_guess, feedback
+	def eliminate_codes(seed, current_guess, feedback)
 		result = []
 		
 		0.upto(seed.length - 1).each do |n|  
