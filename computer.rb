@@ -28,7 +28,7 @@ class Computer
     COLORS.repeated_permutation(4).to_a.sort!
   end
 
-  def guess code, guess
+  def guess(code, guess)
     control = Array.new(4) { |x| x = 0 }
     control_guess = code.dup
 

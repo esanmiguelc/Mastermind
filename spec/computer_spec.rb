@@ -1,4 +1,4 @@
-require 'spec_helper'
+require "spec_helper"
 describe "computer tasks" do
   let(:computer) { Computer.new }
   let(:user)  { User.new }
