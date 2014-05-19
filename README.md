@@ -24,4 +24,4 @@ http://en.wikipedia.org/wiki/Mastermind_(board_game)#Gameplay_and_rules
 
 **Running tests**
 
-To run the tests run run bundle install to get an updated version of RSpec and type rspec on the command line to receive feedback from the tests.
+To run the tests run bundle install to get an updated version of RSpec and type rspec on the command line to receive feedback from the tests.
