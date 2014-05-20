@@ -4,6 +4,7 @@ require_relative 'user'
 
 class Game
   def start
+    puts "Starting new game..."
     computer = Computer.new
     user = User.new
     guess_num = 1
@@ -16,8 +17,7 @@ class Game
       s = computer.eliminate_codes(s, guess, feedback)
       guess_num += 1
     end while feedback[0] != 4
-    puts "#{guess}, Yay! Game over"
+    puts "#{guess}, Yay! Game over" 
   end
 end
 
-puts "Please think of a pattern\nWhen ready type: Game.new.start"
