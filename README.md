@@ -3,7 +3,7 @@ Mastermind
 
 **How to play**
 
-Download the repo, in a ruby shell load 'game.rb'
+Download the repo, in a ruby shell load 'board.rb'
 
 The player thinks of a pattern and the computer will attempt to get the correct answer.
 
