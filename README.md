@@ -5,6 +5,8 @@ Mastermind
 
 Download the repo, in a ruby shell load 'board.rb'
 
+type "s" when ready to begin the game
+
 The player thinks of a pattern and the computer will attempt to get the correct answer.
 
 The game will ask you to think of a pattern it can be any sequence of 4 colors, the available colors are: 
