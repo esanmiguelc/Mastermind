@@ -9,7 +9,7 @@ class Game
     user = User.new
     guesses = []
     feedbacks = []
-    guess_num = 1
+    guess_num = 0
     s = computer.generate_patterns
     begin
       guess = computer.current_guess(s)
