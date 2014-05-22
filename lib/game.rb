@@ -6,7 +6,7 @@ class Game
   def start
     puts "Starting new game..."
     computer = Computer.new
-    user = User.new
+    user = User.new(Kernel)
     guesses = []
     feedbacks = []
     guess_num = 0
