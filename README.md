@@ -3,7 +3,7 @@ Mastermind
 
 **How to play**
 
-Download the repo, in a ruby shell load 'board.rb'
+Download the repo on the command line type: ruby board.rb
 
 type "s" when ready to begin the game
 

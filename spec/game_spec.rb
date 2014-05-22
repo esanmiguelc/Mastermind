@@ -1,6 +1,7 @@
 require "spec_helper"
-let(:game) { Game.new } 
+
 describe "Start the game" do
+  let(:game) { Game.new } 
   it "should start the game" do
     game.should respond_to(:start)
   end
