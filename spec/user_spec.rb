@@ -16,4 +16,10 @@ describe "#give_feedback" do
 
     user.give_feedback
   end
+
+  it "should return array with feedback" do
+    output.should_receive(:gets).and_return(3)
+    output.should_receive(:gets).and_return(1)
+    user.give_feedback.should eql([3,1])
+  end
 end
