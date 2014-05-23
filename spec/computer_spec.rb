@@ -8,6 +8,10 @@ describe "computer tasks" do
     computer.current_guess(Array.new(1296)).should eql(["R", "R", "G", "G"])       
   end 
 
+  it "should select the first from array" do
+    computer.current_guess([["R", "R", "R", "R"],["R", "R", "G", "G"]]).should eql(["R", "R", "R", "R"])
+  end
+
   it "should generate all possible outcomes" do
     generate = computer.generate_patterns
     generate.should have(1296).items
