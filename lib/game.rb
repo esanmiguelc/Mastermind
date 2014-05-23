@@ -17,7 +17,7 @@ class Game
     begin
       guess = computer.current_guess(s)
       guesses << guess
-      puts "#{guess}"
+      @output.puts "#{guess}"
       feedback = user.give_feedback
       feedbacks << feedback
       build_board(guesses, feedbacks)

@@ -12,6 +12,10 @@ describe "computer tasks" do
     computer.current_guess([["R", "R", "R", "R"],["R", "R", "G", "G"]]).should eql(["R", "R", "R", "R"])
   end
 
+  it "should raise exception if no patterns left" do
+     expect { computer.current_guess([]) }.to raise_error
+  end
+
   it "should generate all possible outcomes" do
     generate = computer.generate_patterns
     generate.should have(1296).items
