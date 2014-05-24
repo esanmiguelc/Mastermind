@@ -17,7 +17,7 @@ class Game
     s = @computer.generate_patterns
     while feedback[0] != 4
       guess = @computer.current_guess(s)
-      @output.puts "#{guess}"
+      @output.puts "\n#{guess}"
       feedback = @user.give_feedback
       guesses << guess
       feedbacks << feedback
