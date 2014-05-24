@@ -1,6 +1,7 @@
 describe "#give_feedback" do
   let(:output) { double('output').as_null_object } 
   let(:user) { User.new(output) } 
+  
   it "should prompt for correct hits" do
     output.should_receive(:puts).with("How many were correct?")
     output.should_receive(:gets).and_return(3)

@@ -11,7 +11,7 @@ Please think of a pattern\nWhen ready type: 's'"
 
 answer = gets.chomp.downcase
 if answer == "s"
-  Game.new(Kernel).start
+  Game.new(Kernel, Computer.new, User.new(Kernel)).start
 else
   puts "Didn't understand your input please try again"
 end

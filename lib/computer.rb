@@ -48,4 +48,8 @@ class Computer
     end
     [control.count(1), control.count(2)]
   end
+
+  def exact_match(index)
+    
+  end
 end
