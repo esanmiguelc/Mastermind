@@ -35,7 +35,7 @@ describe "computer tasks" do
   it "should eliminate code that would not have given the same response" do
     code = ["O","B","B","Y"]
     feedback = [3,0]
-    computer.eliminate_codes(s,code,feedback).should eql([["B", "B", "B", "Y"], ["G", "B", "B", "Y"], 
+    computer.eliminate_patterns(s,code,feedback).should eql([["B", "B", "B", "Y"], ["G", "B", "B", "Y"], 
                                                           ["O", "B", "B", "B"], ["O", "B", "B", "G"], 
                                                           ["O", "B", "B", "O"], ["O", "B", "B", "P"], 
                                                           ["O", "B", "B", "R"], ["O", "B", "G", "Y"], 

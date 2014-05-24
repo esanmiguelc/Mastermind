@@ -12,7 +12,7 @@ class Computer
     end
   end
 
-  def eliminate_codes(seed, current_guess, feedback)
+  def eliminate_patterns(seed, current_guess, feedback)
     result = []
     
     0.upto(seed.length - 1).each do |n|  
