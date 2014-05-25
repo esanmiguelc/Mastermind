@@ -5,7 +5,9 @@ describe "#give_feedback" do
   it "should prompt for correct hits" do
     output.should_receive(:puts).with("How many were correct?")
     output.should_receive(:gets).and_return(3)
-
+    output.should_receive(:puts).with("How many were close?")
+    output.should_receive(:gets).and_return(0)
+    
     user.give_feedback
   end
 
