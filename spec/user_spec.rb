@@ -30,6 +30,16 @@ describe "#give_feedback" do
     user.give_feedback
   end
 
+  it "should prompt again when there is incorrect close input" do
+    output.should_receive(:puts).with("How many were correct?")
+    output.should_receive(:gets).and_return(3)
+    output.should_receive(:puts).with("How many were close?")
+    output.should_receive(:gets).and_return(5)
+    output.should_receive(:puts).with("Incorrect input try again. How many were correct?")
+    output.should_receive(:gets).and_return(0)
+    user.give_feedback
+  end
+
   it "should not prompt for guess when correct = 4" do
     output.should_receive(:puts).with("How many were correct?")
     output.should_receive(:gets).and_return(4)
